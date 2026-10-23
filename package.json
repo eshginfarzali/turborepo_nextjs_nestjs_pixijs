@@ -1,15 +1,25 @@
 {
-  "name": "tic-tac-toe",
+  "name": "realtime-tictactoe",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "dev": "concurrently \"npm --prefix backend run start:dev\" \"npm --prefix frontend run dev\""
+  "private": true,
+  "description": "Real-time multiplayer tic-tac-toe: NestJS (GraphQL + Socket.IO) and Next.js + PixiJS in a Turborepo.",
+  "license": "MIT",
+  "packageManager": "pnpm@12.10.1",
+  "engines": {
+    "node": ">=20.9.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:e2e": "turbo run test:e2e",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "prettier": "^3.9.10",
+    "turbo": "^2.11.10"
   }
 }
