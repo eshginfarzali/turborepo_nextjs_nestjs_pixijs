@@ -122,7 +122,7 @@ Open http://localhost:3000 in two browser windows and join the same room. If por
 
 ### Locally
 
-Prerequisites: Node.js 22 (see `.nvmrc`) and pnpm (`corepack enable`).
+Prerequisites: Node.js 24.9+ (see `.nvmrc`; NestJS 12 ships ESM-only packages, which Jest loads natively from Node 24.9) and pnpm (`corepack enable`).
 
 ```bash
 pnpm install
