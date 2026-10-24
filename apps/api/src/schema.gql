@@ -1,0 +1,36 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Game {
+  """9 cells, row by row; null for an empty cell."""
+  board: [String]!
+  players: [Player!]!
+  roomId: String!
+
+  """waiting | playing | won | draw"""
+  status: String!
+
+  """Mark that moves next."""
+  turn: String!
+  winner: String
+}
+
+"""A player in a room (socket ids are not exposed)."""
+type Player {
+  """
+  "X" or "O"
+  """
+  mark: String!
+  name: String!
+}
+
+type Query {
+  game(roomId: String!): Game
+
+  """All active rooms."""
+  games: [Game!]!
+
+  """Rooms waiting for a second player, for the lobby."""
+  openGames: [Game!]!
+}

@@ -1,0 +1,27 @@
+# Runs the API and the web client. Open http://localhost:3000 in two browser windows.
+# Change WEB_PORT / API_PORT if those ports are taken on your machine.
+services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    environment:
+      PORT: 3001
+      CORS_ORIGIN: http://localhost:${WEB_PORT:-3000}
+    ports:
+      - '${API_PORT:-3001}:3001'
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        # The browser connects to the API directly, so this is a host URL.
+        NEXT_PUBLIC_API_URL: http://localhost:${API_PORT:-3001}
+    ports:
+      - '${WEB_PORT:-3000}:3000'
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
