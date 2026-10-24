@@ -1,6 +1,6 @@
 # Realtime Tic-Tac-Toe (Turborepo)
 
-[![CI](https://github.com/eshginfarzali/turborepo_nextjs_nestjs_pixijs/actions/workflows/ci.yml/badge.svg)](https://github.com/eshginfarzali/turborepo_nextjs_nestjs_pixijs/actions/workflows/ci.yml)
+[![CI](https://github.com/eshginfarzali/realtime-tictactoe-turborepo/actions/workflows/ci.yml/badge.svg)](https://github.com/eshginfarzali/realtime-tictactoe-turborepo/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Turborepo](https://img.shields.io/badge/Turborepo-pnpm_workspaces-EF4444?logo=turborepo&logoColor=white)
 ![NestJS 12](https://img.shields.io/badge/NestJS-12-E0234E?logo=nestjs&logoColor=white)
